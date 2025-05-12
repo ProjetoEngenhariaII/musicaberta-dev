@@ -24,14 +24,14 @@ musicaberta-dev/
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/musicaberta-dev.git
+   git clone https://github.com/ProjetoEngenhariaII/musicaberta-dev.git
    cd musicaberta-dev
    ```
 
 2. Clone os repositórios do frontend e backend **dentro da pasta `musicaberta-dev/`**:
    ```bash
-   git clone https://github.com/seu-usuario/musicaberta-frontend.git
-   git clone https://github.com/seu-usuario/musicaberta-backend.git
+   git clone https://github.com/ProjetoEngenhariaII/musicaberta-frontend.git
+   git clone https://github.com/ProjetoEngenhariaII/musicaberta-backend.git
    ```
 
 3. Verifique se a estrutura de pastas está assim:
@@ -56,6 +56,13 @@ DATABASE_URL=postgresql://postgres:prisma@postgres_db:5432/postgres
 STORAGE_URL=http://minio:9000
 MINIO_ROOT_USER=minio
 MINIO_ROOT_PASSWORD=minio123
+```
+
+Exemplo para `musicaberta-frontend/.env`:
+
+```env
+NEXT_PUBLIC_API_URL_BROWSER=http://localhost:3333
+NEXT_PUBLIC_API_URL_INTERNAL=http://backend:3333
 ```
 
 ## 🐳 Subindo o ambiente
