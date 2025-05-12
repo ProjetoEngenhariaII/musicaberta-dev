@@ -1,4 +1,3 @@
-
 # 🎵 Musicaberta Dev
 
 Este repositório contém o ambiente de desenvolvimento unificado para os projetos **frontend** e **backend** do Musicaberta, usando Docker Compose.
@@ -81,8 +80,24 @@ Este comando irá:
 - Iniciar o Prisma Studio (`localhost:5555`)
 - Subir o MinIO (`localhost:9000` | Console: `localhost:9001`)
 
+## 🗂️ Buckets públicos no MinIO
+
+Para o correto funcionamento do sistema, é necessário que os buckets `avatars` e `sheets` existam no MinIO e estejam configurados como públicos.
+
+### Como criar
+
+1. Acesse o console MinIO: [http://localhost:9001](http://localhost:9001)  
+   Login:  
+   - **Usuário:** `minio`  
+   - **Senha:** `minio123`
+
+2. Crie dois buckets com os nomes `avatars` e `sheets`.
+
+3. Para cada bucket, defina a seguinte política de acesso (Access Policy) para: `Public`
+
 ## ❗ Dicas para desenvolvimento
 
 - Alterações nos arquivos locais são refletidas automaticamente nos containers (hot reload).
 - Use o Prisma Studio para explorar o banco.
 - Certifique-se de que as portas 3000, 3333, 5432 e 5555 estão livres.
+
