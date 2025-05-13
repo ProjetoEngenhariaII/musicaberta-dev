@@ -47,21 +47,25 @@ musicaberta-dev/
 ## ⚙️ Variáveis de ambiente
 
 Crie os arquivos `.env` nos projetos `musicaberta-frontend/` e `musicaberta-backend/`.
+Cada repositório tem um arquivo `.env.local` com as variáveis já setadas, é só copiar e colar no aquivo `.env` 
 
 Exemplo para `musicaberta-backend/.env`:
 
 ```env
-DATABASE_URL=postgresql://postgres:prisma@postgres_db:5432/postgres
-STORAGE_URL=http://minio:9000
-MINIO_ROOT_USER=minio
-MINIO_ROOT_PASSWORD=minio123
+DATABASE_URL=
+JWT_SECRET=
+
+S3_ENDPOINT=
+S3_REGION=
+S3_ACCESS_KEY_ID=
+S3_SECRET_ACCESS_KEY=
 ```
 
 Exemplo para `musicaberta-frontend/.env`:
 
 ```env
-NEXT_PUBLIC_API_URL_BROWSER=http://localhost:3333
-NEXT_PUBLIC_API_URL_INTERNAL=http://backend:3333
+NEXT_PUBLIC_API_URL_BROWSER=
+NEXT_PUBLIC_API_URL_INTERNAL=
 ```
 
 ## 🐳 Subindo o ambiente
